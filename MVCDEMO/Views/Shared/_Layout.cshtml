@@ -1,0 +1,143 @@
+﻿<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>The cliamte Regisrty</title>
+</head>
+<body id="home">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+
+        <span style="font-size:30px;cursor:pointer; color:#fff" onclick="openNav()">&#9776; </span>
+        <div class="container">
+            <a  style=" padding-top: 0em;  background: #fff;">
+                <img src="~/img/logo.png" alt="" style="height:92px">
+            </a>
+            <a href="index.html" class="navbar-brand" style="padding-left: 2rem;">Climate Registry Information System (CRIS)</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" >
+                        <a href="~/Test/Editfacility" class="nav-link" style="color:#fff">Manage Inventory</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#explore-head-section" class="nav-link">Reports</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Form&Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Submit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Review&Analyze</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- HOME SECTION -->
+
+    <header id="home-section">
+        <div class="dark-overlay">
+
+            <div class="home-inner">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-8 d-none d-lg-block">
+
+                            <div id="mySidenav" class="sidenav">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <ul class="list-unstyled components">
+                                   
+                                    <li>
+                                        <a href="#" onclick="closeNavs()">Instructions</a>
+                                    </li>
+                                    
+
+                                    <li>
+                                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Profile</a>
+                                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                                            <li>
+                                                <a href="#">Edit My Account</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Entity Selection</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Resource</a>
+                                            </li>
+                                            <li>
+                                                <a href="~/Test/LoginPage">Logout</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="main">
+
+                               
+
+                                @RenderBody()
+
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN FOOTER -->
+    <footer id="main-footer" class="bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-4">
+
+                        <p>©2019 The Climate Registry • 600 Wilshire Blvd., Suite 970, Los Angeles, CA 90017 • (866) 523-0764	Version #: 1.0.7187.24373</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/facilityjs.js"></script>
+    <script>
+        document.getElementById("mySidenav").style.display = "none";
+        function openNav() {
+            document.getElementById("mySidenav").style.display = "block";
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+
+    </script>
+</body>
+</html>

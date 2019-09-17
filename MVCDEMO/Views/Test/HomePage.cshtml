@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "HomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<head>
+    <style>
+        .row {
+            width: 145%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="row">
+      
+
+
+        <div class="col-lg-8 d-none d-lg-block" id="option1-yes">
+            <h1 class="display-4">Instructions </h1>
+            <div class="d-flex flex-row" style="text-align: justify">
+                <p>
+                    Whether you’re a TCR member organization, a TCR-approved verifier, or just an interested browser: we’re glad you’re taking advantage of our database of high quality GHG data. Our CRIS User Guide will walk you through using CRIS. You can download it in the Reporting Toolkit at www.theclimateregistry.org or by clicking "Additional Help" in the Instructions box on each screen.
+
+                    If you need additional help on a specific prompt, hover over the labels throughout CRIS to view the quick tip and learn more about what we’re looking for in that data field.
+
+                    Still have questions? Contact us at help@theclimateregistry.org or (866) 523-0764 ext. 3.
+
+                    We would love to hear how you're using the GHG data in our system, so please send us an email at info@theclimateregstry.org and tell us! If you believe in free access to accurate and credible GHG data, please support our program by making a donation at www.theclimateregistry.org.
+                    <br /><br />
+                    <b>Members:</b> start your reporting process in the Set Up menu or on the “Report via spreadsheet upload” page. If you aren’t able to view those menu items, ask that somebody from your organization provide you with access to your organization’s inventory, or get in touch with us on the help desk.
+
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="d-flex flex-row">
+                    <img src="~/img/Capture.png" alt="Smiley face" width="400" height="200">
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="d-flex flex-row" >
+                    <img src="~/img/download.png" alt="Smiley face" width="350" height="200">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("option1-yes").style.display = "none";
+        function openNav() {
+            document.getElementById("mySidenav").style.display = "block";
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNavs() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+</body>

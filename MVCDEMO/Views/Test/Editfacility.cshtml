@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "Editfacility";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+</head>
+<div>
+    <h2 style="color:aliceblue">
+        Entity Name: @ViewBag.EntityName
+
+        <a href="~/Test/EditInv">
+            <span class="glyphicon glyphicon-pencil"></span>
+        </a>
+
+    </h2>
+
+
+    <br />
+
+
+</div>
+
+<h3 style="color:aliceblue">
+    List of Facilities
+    <a href="~/Test/AddFacilities/">
+        <span class="glyphicon glyphicon-plus"></span>
+    </a>
+
+</h3>
+
+<div class="card">
+
+    <div class="card-body" style="background-color:rgba(0,0,0,.075);">
+        <div id="table" class="table-editable">
+        
+            <table class="table table-bordered table-responsive-md table-striped text-center">
+                <thead>
+                    <tr>
+                        <th class="text-center">Facility Name</th>
+                        <th class="text-center">Emission Year</th>
+
+                        <th class="text-center">Edit</th>
+                        <th class="text-center">Remove</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var facility in ViewBag.Facilities)
+                    {
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true"> @facility.FacilityName</td>
+                            <td class="pt-3-half" contenteditable="true"> @facility.EmissionYear</td>
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="~/Test/AddFacility/@facility.FacilityID">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a>
+                                </span>
+
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button"
+                                            class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Remove
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                    @*<tr>
+                        <td class="pt-3-half" contenteditable="true">CA Office Buildings</td>
+                        <td class="pt-3-half" contenteditable="true">1234 Main, California US</td>
+
+                        <td class="pt-3-half">
+                            <span class="table-up">
+                                <a href="~/Test/AddFacility">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+                            </span>
+
+                        </td>
+                        <td>
+                            <span class="table-remove">
+                                <button type="button"
+                                        class="btn btn-danger btn-rounded btn-sm my-0">
+                                    Remove
+                                </button>
+                            </span>
+                        </td>
+                    </tr>*@
+
+                    @*<tr>
+                            <td class="pt-3-half" contenteditable="true">CA Office Buildings</td>
+                            <td class="pt-3-half" contenteditable="true">1234 Main, California US</td>
+
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="~/Test/AddFacility">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a>
+                                </span>
+
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button"
+                                            class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Remove
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">CA Office Buildings</td>
+                            <td class="pt-3-half" contenteditable="true">1234 Main, California US</td>
+
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="~/Test/AddFacility">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a>
+                                </span>
+
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button"
+                                            class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Remove
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">CA Office Buildings</td>
+                            <td class="pt-3-half" contenteditable="true">1234 Main, California US</td>
+
+                            <td class="pt-3-half">
+                                <span class="table-up">
+                                    <a href="~/Test/AddFacility">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </a>
+                                </span>
+
+                            </td>
+                            <td>
+                                <span class="table-remove">
+                                    <button type="button"
+                                            class="btn btn-danger btn-rounded btn-sm my-0">
+                                        Remove
+                                    </button>
+                                </span>
+                            </td>
+                        </tr>*@
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Editable table -->

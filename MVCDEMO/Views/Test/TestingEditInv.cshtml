@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <div class="container">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+
+
+
+
+            <a href="index.html" class="navbar-brand">Climate Registry Information System (CRIS)</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#SetUp" class="nav-link">Set Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#explore-head-section" class="nav-link">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#create-head-section" class="nav-link">WEN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Form&Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Submit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Review&Analyze</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#share-head-section" class="nav-link">MyProfile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>
